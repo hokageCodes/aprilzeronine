@@ -1,5 +1,5 @@
 # Fullstack E-commerce Web Application
-#### MERN stack with NextJs, Redux and Next Auth, Css in JS with CSS Modules mixed with Sass 
+### MERN stack with NextJs, Redux and Next Auth, Css in JS with CSS Modules mixed with Sass 
 
 
 ### Build Process
