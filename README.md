@@ -3,4 +3,5 @@
 
 
 ### Build Process
-- Created Next App, Cleaned up, and Reset CSS global styles
+- Created Next App, Cleaned up, and Reset CSS global styles.
+- Created Database with MongoDB compass and did the connecting and Disconnecting to the DB functionality .
