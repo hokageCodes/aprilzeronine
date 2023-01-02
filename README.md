@@ -10,3 +10,6 @@
 - Made global variables accessible in next config.
 
 ### Header Component
+- Ad Banner at the top of the Page
+- Navigation (Top) Header and Links Added.
+- Top Menu -> Added state for if user is signed in or not, and also the links under the user's account.
