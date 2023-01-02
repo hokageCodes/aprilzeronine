@@ -4,4 +4,5 @@
 
 ### Build Process
 - Created Next App, Cleaned up, and Reset CSS global styles.
-- Created Database with MongoDB compass and did the connecting and Disconnecting to the DB functionality .
+- Created Database with MongoDB compass and did the connecting and Disconnecting to the DB functionality.
+- Set Up Redux, Redux toolkit, and Redux persisit!
