@@ -7,33 +7,41 @@ import Link from 'next/link';
 import UserMenu from './UserMenu';
 
 export default function Top() {
-    const [loggedIn, setLoggedIn] = useState(false)
+    const [loggedIn, setLoggedIn] = useState(true);
+    const [visible, setVisible] = useState(true);
     return (
         <div className={styles.top}>
             <div className={styles.top__container}>
                 <div></div>
                 <ul className={styles.top__list}>
-                    <li>
+                    <li className={styles.li}>
                         <img src='https://i.ibb.co/jycVGm2/NIgeria.png' alt='Nigeria' />
                         <span>Nigeria / Ngn</span>
                     </li>
-                    <li>
+                    <li className={styles.li}>
                         <MdSecurity />
                         <span>Buyer Protection</span>
                     </li>
-                    <li>
+                    <li className={styles.li}>
                         <span>Customer Service</span>
                     </li>
-                    <li>
+                    <li className={styles.li}>
                         <span>Help</span>
                     </li>
-                    <li>
+                    <li className={styles.li}>
                         <BsSuitHeart />
-                        <Link href="/profile/wishlist">Wishlist</Link>
+                        <Link style={{
+                            color: 'inherit'                      }} 
+                            href="/profile/wishlist">
+                            <span>Wishlist</span>
+                        </Link>
                     </li>
-                    <li>
+                    <li className={styles.li} 
+                        onMouseOver={() => setVisible(true)}
+                        onMouseLeave={() => setVisible(false)}
+                    >
                         {loggedIn ? (
-                            <li>
+                            <li className={styles.li}>
                                 <div className={styles.flex}>
                                     <img src="https://i.ibb.co/rmKkPsd/profile.jpg" alt="profile" />
                                     <span>Hashirama</span>
@@ -42,7 +50,7 @@ export default function Top() {
                                 </div>
                             </li>
                         ) : (
-                            <li>
+                            <li className={styles.li}>
                                 <div className={styles.flex}>
                                     <RiAccountPinCircleLine />
                                     <span>Account</span>
@@ -50,7 +58,9 @@ export default function Top() {
                                 </div>
                             </li>
                         )}
-                        <UserMenu LoggedIn={loggedIn}/>
+                        {
+                            visible && <UserMenu loggedIn={loggedIn}/>
+                        }
                     </li>
                 </ul>
             </div>

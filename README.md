@@ -13,3 +13,4 @@
 - Ad Banner at the top of the Page
 - Navigation (Top) Header and Links Added.
 - Top Menu -> Added state for if user is signed in or not, and also the links under the user's account.
+- Worked on showing the user account state based on if user is logged in or not (No auth yet).
