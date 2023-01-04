@@ -15,3 +15,9 @@
 - Top Menu -> Added state for if user is signed in or not, and also the links under the user's account.
 - Worked on showing the user account state based on if user is logged in or not (No auth yet).
 - Added and styled the Logo, search field, and the cart option(cart length created in and gotten from redux store).
+
+### Footer Component
+- Added main footer links
+- Added footer socials and Newsletter input (News letter isn't functional yet)
+- Added Payment and copyright UI
+- Responsive Footer
