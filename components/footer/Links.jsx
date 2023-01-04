@@ -7,14 +7,14 @@ export default function Links() {
   return (
     <div className={styles.footer__links}>
       {links.map((link, i) => (
-        <ul>
+        <ul key={i}>
           {i === 0 ? (
             <img src="https://i.ibb.co/LhJLwWv/shoppay-Logo.png" alt="shoppay-Logo" />
           ) : (
             <b>{link.heading}</b>
           )}
           {link.links.map((link) => (
-            <li>
+            <li key={i}>
               <Link href={link.link}>{link.name}</Link>
             </li>
           ))}

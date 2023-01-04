@@ -5,22 +5,27 @@ import Footer from '../components/footer'
 import axios from 'axios'
 
 
-export default function Home() {
+export default function Home({ country }) {
+  console.log(country)
   return (
     <>
-      <Header />
-      <Footer />
+      <Header country={country}/>
+      <Footer country={country}/>
     </>
   )
 }
 
 export async function getServerSideProps() {
   let data = await axios
-    .get('https://api.ipregistry.co/66.165.2.7?key=h2n3cj3vxdbiy3o1')
-    .then((res) => {
-      return res.data.location.country
-    }) .catch((err) => {
-      console.log(err)
-    })
-  console.log(data)
+  .get('https://api.ipregistry.co/?key=fqr7clb0s65u0tzy')
+  .then((res) => {
+    return res.data.location.country;
+  }) .catch((err) => {
+    console.log(err)
+  })
+  return {
+    props: {
+      country: { name: data.name, flag: data.flag.emojitwo }
+    }
+  }
 }

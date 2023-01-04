@@ -7,7 +7,7 @@ export default function UserMenu({ loggedIn }) {
             <h4>Welcome to AprilZeroNine!</h4>
             {loggedIn ? (
                 <div className={styles.flex}>
-                    <img className={styles.menu__img} src="https://i.ibb.co/rmKkPsd/profile.jpg" alt="profile" />
+                    <image className={styles.menu__img} src="https://i.ibb.co/rmKkPsd/profile.jpg" alt="profile" />
                     <div className={styles.col}>
                         <span>Welcome Back,</span>
                         <h3>Hashirama</h3>
