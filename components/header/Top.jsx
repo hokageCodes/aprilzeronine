@@ -44,10 +44,9 @@ export default function Top({ country }) {
                         {loggedIn ? (
                             <li className={styles.li}>
                                 <div className={styles.flex}>
-                                    <img src="https://i.ibb.co/rmKkPsd/profile.jpg" alt="profile" />
+                                    <img src="https://i.ibb.co/k0bK08L/profile.jpg" alt="profile" />
                                     <span>Hashirama</span>
                                     <RiArrowDropDownFill />
-
                                 </div>
                             </li>
                         ) : (

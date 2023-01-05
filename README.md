@@ -21,3 +21,6 @@
 - Added footer socials and Newsletter input (News letter isn't functional yet)
 - Added Payment and copyright UI
 - Responsive Footer
+
+### Location Detection
+- Used [THIS API](https://ipregistry.co/) for location detection on the site. Whatever country a user is visiting the site from is going to show accordingly. 
