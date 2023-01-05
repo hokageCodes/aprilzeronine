@@ -24,3 +24,6 @@
 
 ### Location Detection
 - Used [THIS API](https://ipregistry.co/) for location detection on the site. Whatever country a user is visiting the site from is going to show accordingly. 
+
+### Authentication using Next-auth
+- Installed next-auth, and did a test with the provided data in the docs to make sure it works first.
