@@ -9,7 +9,7 @@ import UserMenu from './UserMenu';
 
 export default function Top({ country }) {
     const [loggedIn, setLoggedIn] = useState(true);
-    const [visible, setVisible] = useState(true);
+    const [visible, setVisible] = useState(false);
     return (
         <div className={styles.top}>
             <div className={styles.top__container}>
@@ -44,7 +44,7 @@ export default function Top({ country }) {
                         {loggedIn ? (
                             <li className={styles.li}>
                                 <div className={styles.flex}>
-                                    <image src="https://i.ibb.co/rmKkPsd/profile.jpg" alt="profile" />
+                                    <img src="https://i.ibb.co/rmKkPsd/profile.jpg" alt="profile" />
                                     <span>Hashirama</span>
                                     <RiArrowDropDownFill />
 
