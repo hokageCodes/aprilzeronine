@@ -7,7 +7,7 @@ import axios from 'axios'
 
 
 export default function Home({ country }) {
-  const { data: session } = useSession()
+  const { data: session } = useSession();
   return (
     <>
       <Header country={country}/>

@@ -28,3 +28,4 @@
 ### Authentication using Next-auth
 - Installed next-auth, and did a test with the provided data in the docs to make sure it works first.
 - JSON webToken and MongoDB adapter for registering a user to the DB, and controlling and managing sessions.
+- Created OAuth for Github and Google.
