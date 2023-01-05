@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
 import styles from './styles.module.scss';
 import {MdSecurity} from 'react-icons/md'
@@ -15,8 +16,8 @@ export default function Top({ country }) {
                 <div></div>
                 <ul className={styles.top__list}>
                     <li className={styles.li}>
-                        <image src={country.flag} alt='Nigeria' />
-                        <span>{country.name} / Ngn</span>
+                        <img src={country.flag} alt='Nigeria' />
+                        <span>{country.name} / {country.countryCode}</span>
                     </li>
                     <li className={styles.li}>
                         <MdSecurity />

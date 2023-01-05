@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import Link from "next/link";
 import styles from "./styles.module.scss";
 import { IoLocationSharp } from "react-icons/io5";
@@ -8,7 +9,7 @@ export default function Copyright({ country }) {
       <section>
         <ul>
           {data.map((link) => (
-            <li key={i}>
+            <li>
               <Link href={link.link}>{link.name}</Link>
             </li>
           ))}
