@@ -10,26 +10,26 @@ import clientPromise from './lib/mongodb'
 export default NextAuth({
     adapter: MongoDBAdapter(clientPromise),
   providers: [
-    // OAuth authentication providers...
-    Auth0Provider({
-      clientId: process.env.AUTH0_CLIENT_ID,
-      clientSecret: process.env.AUTH0_CLIENT_SECRET,
-      issuer: process.env.AUTH0_ISSUER
-    }),
-    FacebookProvider({
-      clientId: process.env.FACEBOOK_ID,
-      clientSecret: process.env.FACEBOOK_SECRET
-    }),
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET
     })
   ],
   pages: {
-    // signIn: "/signin"
+    signIn: "/signin"
   }, 
   session : {
     strategy: "jwt",
   },
   secret: process.env.JWT_SECRET
 })
+// OAuth authentication providers...
+// Auth0Provider({
+//   clientId: process.env.AUTH0_CLIENT_ID,
+//   clientSecret: process.env.AUTH0_CLIENT_SECRET,
+//   issuer: process.env.AUTH0_ISSUER
+// }),
+// FacebookProvider({
+//   clientId: process.env.FACEBOOK_ID,
+//   clientSecret: process.env.FACEBOOK_SECRET
+// }),
