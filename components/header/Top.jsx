@@ -6,9 +6,11 @@ import {BsSuitHeart} from 'react-icons/bs'
 import {RiAccountPinCircleLine, RiArrowDropDownFill} from 'react-icons/ri'
 import Link from 'next/link';
 import UserMenu from './UserMenu';
+import { useSession } from 'next-auth/react';
 
 export default function Top({ country }) {
-    const [loggedIn, setLoggedIn] = useState(true);
+    const { data: session } = useSession();
+    // const [loggedIn, setLoggedIn] = useState(true);
     const [visible, setVisible] = useState(false);
     return (
         <div className={styles.top}>
@@ -41,11 +43,11 @@ export default function Top({ country }) {
                         onMouseOver={() => setVisible(true)}
                         onMouseLeave={() => setVisible(false)}
                     >
-                        {loggedIn ? (
+                        {session ? (
                             <li className={styles.li}>
                                 <div className={styles.flex}>
-                                    <img src="https://i.ibb.co/k0bK08L/profile.jpg" alt="profile" />
-                                    <span>Hashirama</span>
+                                    <img src={session.user.image} alt="profile" />
+                                    <span>{session.user.name}</span>
                                     <RiArrowDropDownFill />
                                 </div>
                             </li>
@@ -59,7 +61,7 @@ export default function Top({ country }) {
                             </li>
                         )}
                         {
-                            visible && <UserMenu loggedIn={loggedIn}/>
+                            visible && <UserMenu session={session}/>
                         }
                     </li>
                 </ul>
