@@ -32,3 +32,5 @@
 - Created OAuth for Github and Google.
 - Reroute user to homepage after signup or signin. Also login and signout buttons are functional too using next/auth signIn and SignOut buit in functions.
 - Setup and Implemented [ auth0 ](https://auth0.com/) authentification.
+- Started work on the signin section. 
+- Installed Formik and Yup for the form and error validation, and using tooltips to display the error on the input.
