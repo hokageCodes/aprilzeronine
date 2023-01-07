@@ -34,3 +34,4 @@
 - Setup and Implemented [ auth0 ](https://auth0.com/) authentification.
 - Started work on the signin section. 
 - Installed Formik and Yup for the form and error validation, and using tooltips to display the error on the input.
+- Added and styled Sign in button to project. Not functional yet.
