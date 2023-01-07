@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/jsx-key */
 import { useState } from 'react';
 import styles from '../styles/signin.module.scss';
 import Footer from '../components/footer'
@@ -8,13 +10,15 @@ import { Form, Formik } from 'formik';
 import * as Yup from 'yup'
 import LoginInput from '../components/inputs/loinInput/loginInput';
 import CircledIconBtn from '../components/buttons/circledIconBtn';
+import { getProviders } from 'next-auth/react';
 
 const initialValues = {
   login_email: "",
   login_password: "",
 }
 
-export default function signin() {
+export default function signin({ providers }) {
+  console.log(providers)
   const [user, setUser] = useState(initialValues);
   const { login_email, login_password } = user;
   console.log(user)
@@ -81,10 +85,37 @@ export default function signin() {
                 )
               }
             </Formik>
+            <div className={styles.login__socials}>
+              <span className={styles.or}>Or Continue with</span>
+              <div className={styles.login__socials_wrap}>
+              {
+                providers.map((provider) => (
+                  <div key={provider.name}>
+
+                    <button 
+                      className={styles.social__btn} 
+                      onClick={() => signIn(provider.id)}>
+                      <img src={`../../icons/${provider.name}.png`} alt='' />
+                      Sign in with {provider.name}</button>
+                  </div>
+                ))
+              }
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <Footer country="Nigeria" />
     </>
   )
+}
+
+
+export async function getServerSideProps(context) {
+  const providers = Object.values(await getProviders());
+  return {
+    props: {
+      providers
+    }
+  }
 }

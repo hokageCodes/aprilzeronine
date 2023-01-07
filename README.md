@@ -26,7 +26,6 @@
 - Used [THIS API](https://ipregistry.co/) for location detection on the site. Whatever country a user is visiting the site from is going to show accordingly. 
 
 ### Authentication using Next-auth
-
 - Installed [next-auth ](https://next-auth.js.org/), and did a test with the provided data in the docs to make sure it works first.
 - JSON webToken and MongoDB adapter for registering a user to the DB, and controlling and managing sessions.
 - Created OAuth for Github and Google.
@@ -35,3 +34,5 @@
 - Started work on the signin section. 
 - Installed Formik and Yup for the form and error validation, and using tooltips to display the error on the input.
 - Added and styled Sign in button to project. Not functional yet.
+- Added social (OAuth) links to the signin section so users can sign in with ease.
+
