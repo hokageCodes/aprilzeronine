@@ -35,4 +35,6 @@
 - Installed Formik and Yup for the form and error validation, and using tooltips to display the error on the input.
 - Added and styled Sign in button to project. Not functional yet.
 - Added social (OAuth) links to the signin section so users can sign in with ease.
+- Worked on signin component with the necessary frontend validations for users.
+- Worked on signup component with the necessary frontend validations for users.. All of these aren't functional yet in the case of actually registering or signing into the web application.
 
